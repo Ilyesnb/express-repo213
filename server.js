@@ -11,7 +11,7 @@ app.get("/buy",(req,res)=>{
     res.render("buy")
 })
 app.get("/shop",(req,res)=>{
-    res.render("home")
+    res.render("shop")
 })
 app.all("*",(req,res)=>{
     res.status(404).send("404 can't find the page!")
