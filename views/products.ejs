@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="products.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="navBar">
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/newProducts">new products</a></li>
+            <li><a href="/products">products</a></li>
+            <li><a href="/log-in">login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="product-container">
+        <h1 class="title">our products</h1>
+        <div class="author">
+          <% mybooks.forEach((book)=>{%>
+          <b><%=book.title %></b>
+          <p><%=book.author %></p>
+          <% }) %>
+        </div>
+    </div>
+  </body>
+</html>
