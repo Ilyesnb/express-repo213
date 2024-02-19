@@ -1,5 +1,4 @@
 const {MongoClient }=require("mongodb");
-uri="mongodb+srv://ilyesnabi9:qQnTeBAvuprKW8d9@cluster0.nyufwoa.mongodb.net/?retryWrites=true&w=majority";
 let dbConnection;
 
 module.exports= {
