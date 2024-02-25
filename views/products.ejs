@@ -20,13 +20,26 @@
       </div>
     </header>
     <div class="product-container">
-        <h1 class="title">our products</h1>
-        <div class="author">
-          <% mybooks.forEach((book)=>{%>
-          <b><%=book.title %></b>
-          <p><%=book.author %></p>
-          <% }) %>
+      <div>
+        <div class="title-container">
+          <h1 class="title">Books collection</h1>
         </div>
+        <div  class="books-container">
+            <% bookList.forEach((book)=>{%>
+            <div class="dBooks">
+              <b><%=book.title %></b>
+              <p><%=book.author %></p>
+            </div>
+            <% }) %>
+            <h1>New books</h1>
+            <% bookList.forEach((book)=>{%>
+              <div class="mybooks">
+                <b><%=book.text%></b>
+                <p><%=book.body%></p>
+              </div>
+              <% }) %>
+            </div>
+      </div>
     </div>
   </body>
 </html>

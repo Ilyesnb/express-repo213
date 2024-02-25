@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="log-in.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="log-in.css" />
 
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <style>
+        img{
+           width: 100%;
+           position: absolute;
+           top: 10%;
+           opacity: 0.5;
+        }
+        .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            color: indigo;
+        }
+        button{
+            position: absolute;
+            top: 80%;
+            left: 40%;
+            background-color: indigo;
+            border-radius: 20%;
+            padding: 20px;
+            font-size: 20px;
+
+            
+    
+        }
+        a:hover{
+            transform: scale(1.5);
+            border-bottom: 2px solid transparent;
+        }
+    </style>
     <header>
-        <div class="navBar">
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/newProducts">new  products</a></li>
-                    <li><a href="/products">products</a></li>
-                    <li><a href="/log-in">login</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="navBar">
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/newProducts">new products</a></li>
+            <li><a href="/products">products</a></li>
+            <li><a href="/log-in">login</a></li>
+          </ul>
+        </nav>
+      </div>
+      <img src="../images/library.png" alt="" />
+      <h1 class="title">welcome to the home page</h1>
+      <button>
+          <a href="/newProducts">add a new book</a>
+      </button>
     </header>
-</body>
+  </body>
 </html>

@@ -7,7 +7,6 @@ body {
     background-size: cover;
 
 }
-
 header ul {
     display: flex;
     justify-content: space-around;
@@ -33,4 +32,3 @@ a:hover {
 li {
     list-style-type: none;
 }
-
