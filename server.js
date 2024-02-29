@@ -3,6 +3,7 @@ const { connectToDb, getDb } = require("./db/db");
 const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json())
 // Set view engine and static folder
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -42,18 +43,18 @@ app.post("/newProducts",(req,res)=>{
 
 })
 app.get("/products", (req, res) => {
-    let bookList = [];
-    db
-    .collection("books")
-    .find()
-    .sort({ genres: 1 })
-    .forEach((book) => bookList.push(book))
-    .then(() => {
-      // res.status(200).json(bookList);
-      res.render("products", { bookList });
-    })
+  let bookList = [];
+  db
+  .collection("books")
+  .find()
+  .sort({ genres: 1 })
+  .forEach((book) => bookList.push(book))
+  .then(() => {
+    res.status(200).json(bookList);
+    // res.render("products", { bookList });
+  })
     .catch(() => {
-        res.status(500).json({ error: "Internal server error" });
+      res.status(500).json({ error: "Internal server error" });
     });
 });
 app.get("/log-in", (req, res) => {
